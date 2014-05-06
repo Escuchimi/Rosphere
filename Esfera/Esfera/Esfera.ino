@@ -122,10 +122,14 @@ void update_motors()
   {
     Dxl.writeWord(1,32,drive);
     last_drive = drive;
+    SerialUSB.print("drive: ");
+    SerialUSB.println(drive);
   }
     if(last_steer != steer)
   {
-    Dxl.writeWord(1,30,steer);
+    Dxl.writeWord(2,30,steer);
     last_steer = steer;
+    SerialUSB.print("steer: ");
+    SerialUSB.println(steer);
   }
 }
